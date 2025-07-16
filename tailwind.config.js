@@ -2,17 +2,24 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",  // Include your source files here
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
+    extend: {
+      animation: {
+        orbit: 'orbit 30s linear infinite',
+      },
+      keyframes: {
+        orbit: {
+          '0%': {
+            transform: 'rotate(0deg) translateX(400px) rotate(0deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg) translateX(400px) rotate(-360deg)',
+          },
+        },
+      },
     },
-    extend: {}, // Cleaned up extend section
   },
   plugins: [],
-};
+}

@@ -1,12 +1,14 @@
-import React from 'react'
-import Landingpage from './Pages/Landingpage'
-
+// src/App.jsx
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './routes/AppRoutes';
+import './App.css'
 const App = () => {
   return (
-    <div>
-      <Landingpage/>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
